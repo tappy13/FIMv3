@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeFileX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>SafeFileX</h1>
+    </header>
+    <main id="content">
+        <!-- Initial Content: Upload Form -->
+        <div id="upload-form">
+            <h2>File Integrity Checker</h2>
+            <form id="file-upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file" required>
+                <button type="submit">Upload and Check</button>
+            </form>
+            <div id="messages"></div>
+        </div>
+
+        <!-- Hidden Result Section -->
+        <div id="result-section" style="display: none;">
+            <h2>File Analysis Result</h2>
+            <p><strong>Filename:</strong> <span id="result-filename"></span></p>
+            <p><strong>Hash Value:</strong> <span id="result-hash"></span></p>
+            <h3>Metadata:</h3>
+            <ul id="result-metadata"></ul>
+            <p><strong>Firebase Status:</strong> <span id="result-status"></span></p>
+            <button id="back-button">Check another file</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 SafeFileX</p>
+    </footer>
+</body>
+</html>
