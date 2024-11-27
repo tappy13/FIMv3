@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from hashing_functions import calculate_file_hash, get_file_metadata, store_to_firebase
 import os
 
